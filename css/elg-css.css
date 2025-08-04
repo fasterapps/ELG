@@ -168,7 +168,7 @@ td, th {
   padding: 0;
 }
 .hidden{
-  display: none;
+  display: none !important;
 }
 @font-face {
   font-family: elg-processor-icons;
