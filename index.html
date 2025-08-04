@@ -172,7 +172,7 @@
                     they're doing their best.
                 </div>
                 <div class="space-medium"></div>
-                <div class="counter-box">
+                <div class="counter-box hidden">
                     <div data-w-id="6724c3c3-725e-476e-b6b6-84a2af029586"
                          style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"
                          class="counter-wrap"><h3 class="counter-num">5+</h3>
@@ -316,20 +316,26 @@
                      style="opacity: 1; transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg); transform-style: preserve-3d;"
                      class="form-block w-form">
                     <form id="wf-form-Contact-Us-Form" name="wf-form-Contact-Us-Form" data-name="Contact Us Form"
-                          method="post" action="contact-form.php" class="contact-us-from-wrap"
+                          method="POST" action="https://api.web3forms.com/submit" class="contact-us-from-wrap"
                           data-wf-page-id="66de8f3b3173256786845439"
-                          data-wf-element-id="7cae21c9-f2d0-4ead-664e-626fcc6d04c8" aria-label="Contact Us Form"><h3
-                            class="form-title">We're Just a Message Away</h3>
+                          data-wf-element-id="7cae21c9-f2d0-4ead-664e-626fcc6d04c8" aria-label="Contact Us Form">
+                        <!-- Web3Forms Access Key - Replace with your actual key -->
+                        <input type="hidden" name="access_key" value="33f4e6fa-8bd2-4173-9dba-860bf480a0cd">
+                        
+                        <!-- Optional: Redirect URL after submission -->
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        
+                        <h3 class="form-title">We're Just a Message Away</h3>
                         <div class="space-medium"></div>
                         <div class="w-layout-grid contact-form-grid">
                             <div id="w-node-_9a68a506-157f-9a72-ab5a-1b994b91a171-86845439"
                                  class="input-wrapper contact-input" style="grid-column: span 2;"><input
-                                    class="input-text-field w-input" maxlength="256" name="Contact-Us-Name"
+                                    class="input-text-field w-input" maxlength="256" name="name"
                                     data-name="Contact Us Name" placeholder="Your Name" type="text"
                                     id="Contact-Us-Name-2" required=""></div>
                             <div id="w-node-_07e73c34-88b6-1626-941c-79b9be92d315-86845439"
                                  class="input-wrapper contact-input"><input class="input-text-field w-input"
-                                                                            maxlength="256" name="Contact-Us-Email"
+                                                                            maxlength="256" name="email"
                                                                             data-name="Contact-Us-Email"
                                                                             placeholder="Email Address" type="email"
                                                                             id="Contact-Us-Email-2" required=""></div>
@@ -337,7 +343,7 @@
                                  class="input-wrapper contact-input"><textarea required=""
                                                                                placeholder="Write Message ..."
                                                                                maxlength="5000" id="Contact-Message-2"
-                                                                               name="Contact-Message"
+                                                                               name="message"
                                                                                data-name="Contact-Message"
                                                                                class="input-text-field input-textarea w-input"></textarea>
                             </div>
