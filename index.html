@@ -355,7 +355,7 @@
                         <div>Thank you! Your submission has been received!</div>
                     </div>
                     <div class="w-form-fail" tabindex="-1" role="region" aria-label="Contact Us Form failure">
-                        <div>Thank you! Your submission has been received!</div>
+                        <div>Oops! Something went wrong while submitting the form.</div>
                     </div>
                 </div>
             </div>
@@ -437,13 +437,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     body: formData
                 });
                 
-                if (response.ok) {
+                const result = await response.json();
+                
+                if (response.ok && result.success) {
                     // Hide form and show success message
                     form.style.display = 'none';
                     successDiv.style.display = 'block';
                     successDiv.innerHTML = '<div style="text-align: center; padding: 20px; background: #d4edda; color: #155724; border-radius: 8px; margin-bottom: 20px;"><h4>Thank You!</h4><p>Your message has been sent successfully. We\'ll get back to you soon!</p></div>';
                 } else {
-                    throw new Error('Form submission failed');
+                    throw new Error(result.message || 'Form submission failed');
                 }
             } catch (error) {
                 // Show error message
