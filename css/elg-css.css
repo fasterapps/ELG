@@ -501,7 +501,6 @@ button, [type="button"], [type="reset"] {
 }
 
 .w-form-fail {
-  background-color: #ffdede;
   margin-top: 10px;
   padding: 10px;
   display: none;
@@ -3528,7 +3527,7 @@ blockquote {
 }
 
 .contact-section {
-  background-color: var(--light-brown);
+  background-color: #FCF9F4;
   padding-top: 140px;
   padding-bottom: 140px;
   position: relative;
